@@ -1,0 +1,13 @@
+html , body {background-color: #fff;}
+body , nav li a , .logo a{color: #3a3a3a;}
+nav {background-color: #fff; border-bottom: 1px solid #ff0000; box-shadow: 0 3px 3px #e4c37c}
+nav li a:hover{color: #222222;}
+nav li a:hover {color: #333;}
+footer {border-top: 1px solid #e4c37c; color: #e4c37c}
+.navbar-toggler-right {background-color: transparent;}
+.navbar-toggler-right:hover , .navbar-toggler-right:focus {
+    background-color: #ddd;
+  }
+  
+  .line {background-color: #555;}
+  .topnav {background-color: #fff;}
