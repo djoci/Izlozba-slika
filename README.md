@@ -1,24 +1,22 @@
 Izlozba slika
-Initializing the project
+Inicijalizacija projekta
 
-After checking out project npm install command should be run. For running the REST api server npm run server command should be run.
-Project structure
+Nakon otvaranja projekta treba izvršiti komandu npm install. Za pokretanje REST api servera treba pokrenuti naredbu npm run server.
 
 Struktura projekta:
-Project structure should look something like this:
 
 ```
 .
 ├── css
+│   ├── colors.css
+│   ├── greed.css
 │   └── main.css
-├── doc
-├── img
+├── images
+├── thumbs
 ├── js
 │   ├── main.js
 │   └── vendor
 │       └── jquery.js
-├── .editorconfig
-├── favicon.ico
 └── index.html
 ```
-Korišćene tehnologije: HTML, CSS, JAVASCRIPT, jQUERY, JSON, AXIOS, REACT, ESLint.
+Korišćene tehnologije: HTML, CSS, JAVASCRIPT, jQUERY, JSON, AXIOS.
