@@ -1,11 +1,11 @@
             const _api = axios.create({
-                  baseURL:`http://localhost:3004`
+                  baseURL:`http://localhost:3000`
               });
 
              async function displayAds(){
                 let response = await _api.get(`/izlozba`);
                 let ads = await response.data;
- /*
+
                 for (const ad of ads) {
                   let description =await getDescription(ad.id);
                   let room = getRoomDescription(ad.roomCount);
@@ -83,4 +83,3 @@
               }
               displayAds()
 
-*/
