@@ -2,7 +2,8 @@
     "izlozba": 
 [
 {
-    "ID": "1",
+    "id": 1,
+    "imgUrl": "./images/Badnjak.jpg",
     "naziv": "Badnjak",
     "name": "Badnjak",
     "godina": "2018",
@@ -16,7 +17,8 @@
     "lokacija": "Badnjak.jpg"
 },
 {
-    "ID": "2",
+    "id": 2,
+    "imgUrl": "./images/judizam.jpg",
     "naziv": "Poslednja molitva starog rabina",
     "name": "The last prayer of the old Rabbi",
     "godina": "2017",
@@ -30,7 +32,8 @@
     "lokacija": "judizam.jpg"
 },
 {
-    "ID": "3",
+    "id": 3,
+    "imgUrl": "./images/Rusija.jpg",
     "naziv": "Loza ruskih careva",
     "name": "The vine of Russian emperors",
     "godina": "2015",
@@ -46,3 +49,4 @@
 ]
 
 }
+
