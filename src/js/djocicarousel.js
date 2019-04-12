@@ -1,4 +1,3 @@
-
  function toggleFunction() {
    var x = document.getElementById("collapse");
    if (x.style.display === "block") {
@@ -16,12 +15,7 @@
 		var kt=-1;	
 	$(document).ready(function() {
 	   //Automatski slider
-		
-
-	
-
 	});
-
 
 function showslide(slidenumber) {
 	if (!$('[data-slide='+ slidenumber +']').hasClass('item-current') && !$('.item-current').hasClass('trans') ) {	
@@ -35,10 +29,6 @@ function showslide(slidenumber) {
 	   }, 1000);		
 	}		
 }
-
-
-
-
 
 function slideslide() {
 	var TotalSlides = $('.previmg').length;
@@ -78,6 +68,7 @@ $( ".close" ).click(function() {
 });
 
 $( ".rihgt" ).click(function() {
+	var TotalSlides = $('.previmg').length;
    let vidise = $('.vidisme').attr('src');   
    let x = parseInt($(".glavna-slika div img[src='"+ vidise +"']").parent().parent().parent().attr("data-slide"));
    let next = (x+1)%TotalSlides;
@@ -91,6 +82,7 @@ $( ".rihgt" ).click(function() {
 	   }, 1000);   	
 });
 $( ".left" ).click(function() {
+	var TotalSlides = $('.previmg').length;
    let vidise = $('.vidisme').attr('src');   
    let x = parseInt($(".glavna-slika div img[src='"+ vidise +"']").parent().parent().parent().attr("data-slide"));
    let next = (x-1+TotalSlides)%TotalSlides;
@@ -112,7 +104,6 @@ $( window ).resize(function() {
 		} else {
 		   $( ".stop" ).trigger( "click" );
 		}
-
 
 });
 
@@ -140,6 +131,3 @@ $( "#openGal" ).mouseover(function(){
 $( ".second-nav" ).mouseleave(function() {
    galery();
 });
-
-
-
