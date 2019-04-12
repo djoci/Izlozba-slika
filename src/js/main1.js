@@ -4,31 +4,44 @@
 
              async function sadrzaj(){
                 let response = await _api.get(`/izlozba`);
-                let ads = await response.data;
-             
-                for (const ad of ads) {
-                    
-                    _render(ad);
+                let slike = await response.data;
+                let i=0;
+                let item_curent;
+                for (const slika of slike) {
+                   if(i==0){
+ 							item_curent="item-current";                   
+                   } else {
+							item_curent="";                   
+                   }
+                   if (slika.tip !="A" && slika.ID !="18") {
+                    _render(slika,i,item_curent);
+                    i++;
+                   }
                   }
-            
             }
 
 
-            async function _render(ad){
-                $(`.carousel`).append(`<div class="slika caroitem grid-containerN item-current" data-slide='0'>
+            async function _render(slika,i,item_curent){
+                $(`.carousel`).append(`<div class="slika caroitem grid-containerN ${item_curent}" data-slide='${i}'>
                 <div class="glavna-slika item1">
-                    <div><img src="./images/CvetSakuri.jpg" alt="Sakura blossom"></div>
+                    <div><img src="images/${slika.lokacija}" alt="${slika.naziv}" ></div>
                 </div>
                 <div class="opis text-left item2">
                 <p> </p>
                 </div>
                 <div class="text-left podacioslici item3">
                 <p class="author-main">Irina Ohrimenko</p>
-                  <p class="it">Soul of the desert, 2016</p>
+                  <p class="it">${slika.name}, ${slika.godina}</p>
                   <p class="tehnika">acrylic on canvas</p>
-                  <p>140cm &times; 100cm</p>
+                  <p>${slika.sirina}cm &times; ${slika.visina}cm</p>
                  </div>  
-                 </div>`)
+                 </div>`);
+                 $(`.grid-galerija`).append(
+                 `<img src="thumbs/${slika.lokacija}"  alt="${slika.naziv}" class="previmg landscape" onclick="showslide(${i})" />`
+                         
+                 )                 
+                  
+                 
                 }
                 sadrzaj()
                
