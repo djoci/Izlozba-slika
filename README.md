@@ -1,4 +1,5 @@
 Izlozba slika
+
 Inicijalizacija projekta
 
 Nakon otvaranja projekta treba izvršiti komandu npm install. Za pokretanje REST api servera treba pokrenuti naredbu npm run server.
