@@ -122,24 +122,24 @@ h1.indeksh1 {margin-top: 110px}
 	.slika {padding-right: 20px;}
 	.glavna-slika  {padding-left: 20px;}
 	
-/* Carousel Djoci/Mitar */
+/* Carousel Djoci*/
 .carousel {position: relative; height: 1050px;}
 .carousel .caroitem {position: absolute; }
 .carousel .caroitem {z-index: 99; opacity: 0;}
-.carousel .caroitem.item-current {z-index: 100; opacity: 100;}	
+.carousel .caroitem.item-current {z-index: 100; opacity: 100;}
+.grid-galerija img , .stop , .close{cursor: pointer;}	
 	
 .extra-buttons {position: absolute; left:20px; z-index: 101;  }
 .zoom {display: inline-block; width: 48px; height: 48px; background: url(../imgs/zoom.svg);opacity: 0; }
 .play {display: inline-block; width: 48px; height: 48px; background: url(../imgs/play.svg);opacity: 0; }
-.stop {display: inline-block; width: 32px; height: 32px; background: #000;opacity: 0; padding: 0 6px; vertical-align: top; margin-top: 5px; margin-left: 10px; cursor: pointer;}
+.stop {display: inline-block; width: 32px; height: 32px; background: #000;opacity: 0; padding: 0 6px; vertical-align: top; margin-top: 5px; margin-left: 10px;}
 .carousel:hover  .zoom, .carousel:hover  .stop, .carousel:hover  .play {opacity: 0.6; transition: all 1s;} 
 .carousel:hover  .zoom:hover, .carousel:hover  .stop:hover, .carousel:hover  .play:hover  {opacity: 1; transition: all .1s; cursor: pointer;} 
 
 .enlarged{position: fixed; left:0; top:0; width: 100%; width: 100vw;   background: #000;  height: 0; opacity: 0;transition: all 0.5s;z-index:0; overflow: hidden;
 display: table-cell; vertical-align: middle; text-align: center;
  }
-.enlarged.show{height: 100vh; opacity: 1; width: 100vw;  z-index: 150; }	
-nav ul li.nav-link.right-link {position:  absolute; right: 25px;}	
+.enlarged.show{height: 100vh; opacity: 1; width: 100vw;  z-index: 150; }		
 .second-nav{display: flex; justify-content: center; }
 .navbar-nav  ul.navbar-nav.second-nav.closed  {  height: 0;  opacity: 0; top: -200px; position: absolute;  }
 .navbar-nav  ul.navbar-nav.second-nav.opened  { 	width: 100vw !important; position: absolute; left:0 ;  height: 55px; 
@@ -177,7 +177,6 @@ h1.indeksh1 {padding-left: 20px;}
     .irina-sa-jabukom {width: 80%;}
 }
 
-
 .navigacija nav {position: fixed; width: 100%;}
 
 @-webkit-keyframes imgshow {
@@ -211,12 +210,9 @@ h1.indeksh1 {padding-left: 20px;}
   animation-fill-mode: forwards;  
 }
 
-
-
-
 .velikaslika {margin-left: auto; margin-right: auto;}
 .velikaslika img{max-width: 98vw; max-height: 98vh; width: auto; height: auto; display: inline-block; margin-left: 1vw; margin-top: 1vh;}
-.close {color: rgba(255,255,255,0.4); position: absolute; right: 20px; top: -10px; font-size: 40px; cursor: pointer; transition:all 0.3s; }
+.close {color: rgba(255,255,255,0.4); position: absolute; right: 20px; top: -10px; font-size: 40px; transition:all 0.3s; }
 .close:hover {color: rgba(255,255,255,0.7);  }
 body.noscroll {overflow: hidden;}
 .left, .rihgt {color: #fff; display: inline-block; width: 30px; height: 80px;  position:  absolute; top: 50vh; margin-top: -40px; opacity: 0.4; cursor: pointer; }
@@ -241,11 +237,6 @@ body.noscroll {overflow: hidden;}
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; 
 }
-footer a {color: #ff7777}
-
-
-
-
 
 @media only screen and (min-width: 992px) {
 	.grid-containerN {
@@ -276,6 +267,3 @@ footer a {color: #ff7777}
   grid-area: 2 ;
 }
 }
-
-
-
