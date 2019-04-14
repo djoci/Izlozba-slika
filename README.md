@@ -14,6 +14,9 @@ Struktura projekta:
 │   └── main.css
 ├── images
 ├── thumbs
+├── imgs
+│    └── favico
+│ 
 ├── js
 │   ├── main.js
 │   └── vendor
