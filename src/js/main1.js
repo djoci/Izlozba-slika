@@ -24,7 +24,7 @@
             async function _render(slika,i,item_curent){
                 $(`.carousel`).append(`<div class="slika caroitem grid-containerN ${item_curent}" data-slide='${i}'>
                 <div class="glavna-slika item1">
-                    <div><img src="images/${slika.lokacija}" alt="${slika.naziv}" ></div>
+                    <div><img src="images/${slika.lokacija}" alt="${slika.name}" ></div>
                 </div>
                 <div class="opis text-left item2">
                 <p> </p>
@@ -37,7 +37,7 @@
                  </div>  
                  </div>`);
                  $(`.grid-galerija`).append(
-                 `<img src="thumbs/${slika.lokacija}"  alt="${slika.naziv}" class="previmg landscape" onclick="showslide(${i})" />`
+                 `<img src="thumbs/${slika.lokacija}"  alt="${slika.name}" class="previmg landscape" onclick="showslide(${i})" />`
                          
                  )                 
                   

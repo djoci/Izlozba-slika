@@ -177,7 +177,7 @@ h1.indeksh1 {padding-left: 20px;}
     .irina-sa-jabukom {width: 80%;}
 }
 
-.navigacija nav {position: fixed; width: 100%;}
+.navigacija nav{position: fixed; width: 100%;}
 
 @-webkit-keyframes imgshow {
   0%   {opacity: 0;}
