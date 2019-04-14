@@ -1,0 +1,281 @@
+* {box-sizing: border-box;margin: 0;padding: 0;}
+.hidden {display: none !important;}
+html , body {min-height:100%;font-family: 'Exo', sans-serif;line-height: 1.5}
+body {height: 100%;overflow-x: hidden;font-size: 1rem;font-weight: 400;}
+.clear {clear: both;}
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.it {font-style: italic;}
+.tehnika {letter-spacing: 2px;}
+h1 ,h2{font-weight: 400;margin-top: 10px}
+nav {
+height:70px;
+padding: .5rem 1.25rem;
+}
+
+.author-main{ text-transform: uppercase; line-height: 150%;}
+.logo img {max-height: 50px;}
+.logo p {font-size: 1.5em; font-weight: bolder;}
+a {text-decoration: none;}
+a:focus, a:hover {outline: 0;}
+.navbar-nav {list-style: none;padding-left: 0;}
+nav ul li , .logo{float: left;}
+nav ul li a { 
+display: block;
+text-align: center;
+padding: 15px; 
+-webkit-transition: all 0.2 ease-in 0s;
+transition: all 0.2s ease-in 0s;
+}
+nav li a {font-weight: 300;}
+
+.grid-container{margin-top: 10px;}
+.glavna-slika img {max-width: 100%;}
+
+.grid-galerija img {height: auto; width: 100%; }
+.o-meni p , .opis {line-height: 1.3;}
+.opis {font-weight: 300; margin-top: 10px; margin-bottom: 30px;}
+footer {padding-top: 20px;padding-bottom: 20px;margin-top: 40px;}
+/*togle dugme*/
+.navbar-toggler-right {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+   padding: 7px 10px;
+   border: 1px solid #ddd;
+   border-radius: .30rem;
+   width: 40px;
+   height: 30px;
+   display: block;
+}
+.line {
+display: block;
+height: 1px;
+width: 20px;
+margin-bottom: 6px;
+}
+.line:last-child {margin-bottom: 0;}
+/*About*/
+.about-naslov h1 {font-size: 1.3em;}
+.o-meni h2 {font-size: 1.1em;}
+.about-naslov h1 , .o-meni h2{text-transform: uppercase;letter-spacing: 0.04em;}
+.irina-sa-jabukom {width: 50%;margin-left: auto;margin-right: auto;}
+.irina-sa-jabukom img{max-width: 100%;height: auto;margin: 10px 0;}
+.o-meni {margin-left: auto;margin-right: auto;}
+.o-meni p {margin-bottom: 10px;letter-spacing: 0.04em;text-align: justify;}
+
+
+h1.indeksh1 {margin-top: 110px}
+
+@media only screen and (max-width: 767px) {
+	h1.indeksh1 {margin-top: 80px}
+	nav {height:50px;padding: .5rem;position: relative;}
+	nav ul li , .logo{
+		float: none;
+        display: block;
+	}
+	nav ul li a {
+		padding: 7px;
+		text-align: left;
+		margin: 0 0 0 10px;
+		position: relative;
+		display: block;
+	}
+	.logo img {max-height: 40px;margin-top: -3px}
+	.container {z-index: 1;}
+	header {z-index: 10;position: relative;}
+	.topnav {position: relative;
+		margin-right: -15px;
+		margin-left: -15px;
+		overflow-y: auto;
+		display: block;
+		margin-top: 6px;
+		padding-right: 15px;
+        padding-left: 15px;
+		overflow-x: visible;
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+	}
+	.navbar-nav {
+		margin: 7.5px -15px;
+	}
+	footer {margin-top: 20px;text-align: center;padding-top: 10px;}
+	h1 {font-size: 1.5em;}
+	.opis {font-size: 0.9rem;}
+	/*.grid-galerija img {display: block; margin-bottom: 10px;}*/
+	grid-galerija {display: none !important;}
+	#collapse {display: none;}
+	/*About*/
+	.about-naslov h1 , .o-meni h2{font-size: 1em;text-align: left;}
+   .irina-sa-jabukom {width: 50%;}
+   .o-meni p {font-size: 14px;}
+   .carousel .caroitem{margin-top: 25px}
+	.velikaslika, .enlarged{display: none}
+	#openGal{font-size: 0; padding:0; margin-top: -4px; }
+	.sub-nav-link  {padding-left: 15px ;  }	
+	.navbar-nav{overflow: hidden; }
+	.topnav{border-bottom: 1px solid #f00; box-shadow: 0 3px 3px #e4c37c;}
+}
+@media only screen and (min-width: 768px) {
+	.navbar-toggler-right , .line {display: none;}
+	.slika {padding-right: 20px;}
+	.glavna-slika  {padding-left: 20px;}
+	
+/* Carousel Djoci/Mitar */
+.carousel {position: relative; height: 1050px;}
+.carousel .caroitem {position: absolute; }
+.carousel .caroitem {z-index: 99; opacity: 0;}
+.carousel .caroitem.item-current {z-index: 100; opacity: 100;}	
+	
+.extra-buttons {position: absolute; left:20px; z-index: 101;  }
+.zoom {display: inline-block; width: 48px; height: 48px; background: url(../imgs/zoom.svg);opacity: 0; }
+.play {display: inline-block; width: 48px; height: 48px; background: url(../imgs/play.svg);opacity: 0; }
+.stop {display: inline-block; width: 32px; height: 32px; background: #000;opacity: 0; padding: 0 6px; vertical-align: top; margin-top: 5px; margin-left: 10px; cursor: pointer;}
+.carousel:hover  .zoom, .carousel:hover  .stop, .carousel:hover  .play {opacity: 0.6; transition: all 1s;} 
+.carousel:hover  .zoom:hover, .carousel:hover  .stop:hover, .carousel:hover  .play:hover  {opacity: 1; transition: all .1s; cursor: pointer;} 
+
+.enlarged{position: fixed; left:0; top:0; width: 100%; width: 100vw;   background: #000;  height: 0; opacity: 0;transition: all 0.5s;z-index:0; overflow: hidden;
+display: table-cell; vertical-align: middle; text-align: center;
+ }
+.enlarged.show{height: 100vh; opacity: 1; width: 100vw;  z-index: 150; }	
+nav ul li.nav-link.right-link {position:  absolute; right: 25px;}	
+.second-nav{display: flex; justify-content: center; }
+.navbar-nav  ul.navbar-nav.second-nav.closed  {  height: 0;  opacity: 0; top: -200px; position: absolute;  }
+.navbar-nav  ul.navbar-nav.second-nav.opened  { 	width: 100vw !important; position: absolute; left:0 ;  height: 55px; 
+																	margin-top: 8px;  transition: all 0.3s; background: #f7edd7 }
+h1.indeksh1 {padding-left: 20px;}
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+ 	.logo p {font-size: 1em;}
+ 	.grid-galerija img.portrait {max-height: 92px; width: auto}
+ 	.opis{padding-left: 20px;}
+   .podacioslici {padding-left: 20px;}
+	
+ }
+ @media only screen and (min-width: 992px) {
+	.topnav {margin-left: auto;margin-right: auto;}
+
+		.grid-galerija img.portrait {max-height: 77px; width: auto}
+		.irina-sa-jabukom {width: 33.33%;}
+		.o-meni {width: 70%;}
+}
+@media only screen and (min-width: 1200px) {
+	.grid-galerija img.portrait {max-height: 92px; width: auto}
+}
+@media only screen and (min-width: 1500px) {
+	h1 {margin-top: 40px;}
+	.grid-galerija img.portrait {max-height: 114px; width: auto}
+}
+@media only screen and (max-width: 575px) {
+	.slika {margin-left: 0px;}
+	.glavna-slika{padding-left: 0}
+   .slika .opis { 
+    padding-left: 0;
+    }
+    .irina-sa-jabukom {width: 80%;}
+}
+
+
+.navigacija nav {position: fixed; width: 100%;}
+
+@-webkit-keyframes imgshow {
+  0%   {opacity: 0;}
+  100% {opacity: 100;}
+}
+@keyframes imgshow {
+  0%   {opacity: 0;}
+  100% {opacity: 100;}
+}
+@-webkit-keyframes imghide {
+  0%   {opacity: 100;}
+  100% {opacity: 0;}
+}
+@keyframes imghide {
+  0%   {opacity: 100;}
+  100% {opacity: 0;}
+}
+
+.carousel  .caroitem.item-current.trans{
+  -webkit-animation: imghide 1s; 
+  animation: imghide 1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
+  }
+
+.carousel  .caroitem.item-next.trans{
+  -webkit-animation: imgshow 1s; 
+  animation: imgshow 1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
+}
+
+
+
+
+.velikaslika {margin-left: auto; margin-right: auto;}
+.velikaslika img{max-width: 98vw; max-height: 98vh; width: auto; height: auto; display: inline-block; margin-left: 1vw; margin-top: 1vh;}
+.close {color: rgba(255,255,255,0.4); position: absolute; right: 20px; top: -10px; font-size: 40px; cursor: pointer; transition:all 0.3s; }
+.close:hover {color: rgba(255,255,255,0.7);  }
+body.noscroll {overflow: hidden;}
+.left, .rihgt {color: #fff; display: inline-block; width: 30px; height: 80px;  position:  absolute; top: 50vh; margin-top: -40px; opacity: 0.4; cursor: pointer; }
+.left {left: 5px;}
+.rihgt {right: 5px;}
+.left:hover, .rihgt:hover {opacity: 0.7}
+
+.velikaslika {position: absolute; left: 50%;}
+.velikaslika img {margin-left: -100%;}
+.velikaslika .videcesme { opacity: 0}
+.velikaslika .vidisme { opacity: 1}
+
+.velikaslika .videcesme.prelaz {
+  -webkit-animation: imgshow 1s; 
+  animation: imgshow 1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
+}
+.velikaslika .vidisme.prelaz{
+  -webkit-animation: imghide 1s; 
+  animation: imghide 1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
+}
+footer a {color: #ff7777}
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+	.grid-containerN {
+	  display: grid;
+	  grid-template-columns: 25% 50% 25%;
+	}
+	
+	.item1 {
+	  grid-area: 1 / 1 / 3 / 3;
+	}
+	.item2 {
+	  grid-area: 3 / 1 / 3 / 3;
+	  padding-left: 20px;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.grid-containerN {
+	  display: grid;
+	  grid-template-columns: 100%;
+	}
+.item1 {
+  grid-area: 1 ;
+}
+.item2 {
+  grid-area: 3 ;
+}
+.item3 {
+  grid-area: 2 ;
+}
+}
+
+
+
