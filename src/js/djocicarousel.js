@@ -61,8 +61,17 @@ $( ".zoom" ).click(function() {
 	  $('.enlarged').addClass('show');
 	  $('body').addClass('noscroll');
 });
+
+$( ".colorme" ).click(function() {
+	var obojime = $('.item-current  div  img').attr('src');
+	$('.bojanka').attr('src',  obojime);
+	$('.obojeno').addClass('show');
+	$('body').addClass('noscroll');
+});
+
 $( ".close" ).click(function() {
 	  $('.enlarged').removeClass('show');
+	  $('.obojeno').removeClass('show');
 	  $('body').removeClass('noscroll');
 });
 
@@ -94,6 +103,40 @@ $( ".left" ).click(function() {
    		$('.videcesme.prelaz').addClass('vidisme').removeClass('prelaz').removeClass('videcesme');   
 	   }, 1000);   	
 });
+
+
+$( ".rihgt" ).click(function() {
+	var TotalSlides = $('.previmg').length;
+   let obojise = $('.bojanka').attr('src');   
+   let x = parseInt($(".glavna-slika div img[src='"+ obojise +"']").parent().parent().parent().attr("data-slide"));
+   let next = (x+1)%TotalSlides;
+   novisrc = $('[data-slide='+ next +'] div img').attr('src');;
+	$('.obojicese').attr('src',novisrc);
+   $('.obojicese').addClass('prelaz');
+   $('.bojanka').addClass('prelaz');
+	   setTimeout(function(){ 
+   		$('.bojanka.prelaz').addClass('obojicese').removeClass('prelaz').removeClass('bojanka'); 
+   		$('.obojicese.prelaz').addClass('bojanka').removeClass('prelaz').removeClass('obojicese');   
+	   }, 1000);   	
+});
+$( ".left" ).click(function() {
+	var TotalSlides = $('.previmg').length;
+   let obojise = $('.bojanka').attr('src');   
+   let x = parseInt($(".glavna-slika div img[src='"+ obojise +"']").parent().parent().parent().attr("data-slide"));
+   let next = (x-1+TotalSlides)%TotalSlides;
+   novisrc = $('[data-slide='+ next +'] div img').attr('src');;
+	$('.obojicese').attr('src',novisrc);
+   $('.obojicese').addClass('prelaz');
+   $('.bojanka').addClass('prelaz');
+	   setTimeout(function(){ 
+   		$('.bojanka.prelaz').addClass('obojicese').removeClass('prelaz').removeClass('bojanka'); 
+   		$('.obojicese.prelaz').addClass('bojanka').removeClass('prelaz').removeClass('obojicese');   
+	   }, 1000);   	
+});
+
+
+
+
 $( window ).resize(function() {
 	if ($( window ).width()>767) {
 	  $( ".stop" ).trigger( "click" );
@@ -129,3 +172,11 @@ $( window ).resize(function() {
  $( ".second-nav" ).mouseleave(function() {
   galery();
  });
+
+ document.getElementById("inp-color").addEventListener("change", obojiMe);
+function obojiMe() {
+    var dohvatiInput = document.getElementById("inp-color");
+    var boja = dohvatiInput.value;
+	//document.body.style.backgroundColor = boja;
+	document.getElementById("obojeno").style.backgroundColor=boja;
+}

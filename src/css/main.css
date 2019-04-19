@@ -111,7 +111,7 @@ h1.indeksh1 {margin-top: 110px}
    .irina-sa-jabukom {width: 50%;}
    .o-meni p {font-size: 14px;}
    .carousel .caroitem{margin-top: 25px}
-	.velikaslika, .enlarged{display: none}
+	.velikaslika, .enlarged , .obojeno , .bigcolor{display: none}
 	#openGal{font-size: 0; padding:0; margin-top: -4px; }
 	.sub-nav-link  {padding-left: 15px ;  }	
 	.navbar-nav{overflow: hidden; }
@@ -127,19 +127,21 @@ h1.indeksh1 {margin-top: 110px}
 .carousel .caroitem {position: absolute; }
 .carousel .caroitem {z-index: 99; opacity: 0;}
 .carousel .caroitem.item-current {z-index: 100; opacity: 100;}
-.grid-galerija img , .stop , .close{cursor: pointer;}	
+.grid-galerija img , .stop , .close , .colorme{cursor: pointer;}	
 	
 .extra-buttons {position: absolute; left:20px; z-index: 101;  }
 .zoom {display: inline-block; width: 48px; height: 48px; background: url(../imgs/zoom.svg);opacity: 0; }
 .play {display: inline-block; width: 48px; height: 48px; background: url(../imgs/play.svg);opacity: 0; }
-.stop {display: inline-block; width: 32px; height: 32px; background: #000;opacity: 0; padding: 0 6px; vertical-align: top; margin-top: 5px; margin-left: 10px;}
-.carousel:hover  .zoom, .carousel:hover  .stop, .carousel:hover  .play {opacity: 0.6; transition: all 1s;} 
-.carousel:hover  .zoom:hover, .carousel:hover  .stop:hover, .carousel:hover  .play:hover  {opacity: 1; transition: all .1s; cursor: pointer;} 
+.stop , .colorme{display: inline-block; width: 32px; height: 32px; background: #000;opacity: 0; padding: 0 6px; vertical-align: top; margin-top: 5px; margin-left: 10px;}
+.carousel:hover  .zoom, .carousel:hover  .stop, .carousel:hover  .play , .carousel:hover .colorme{opacity: 0.6; transition: all 1s;} 
+.carousel:hover  .zoom:hover, .carousel:hover  .stop:hover, .carousel:hover  .play:hover  , .carousel:hover .colorme{opacity: 1; transition: all .1s; cursor: pointer;} 
+.colorme {background: #f00;border: 5px solid #000;}
 
-.enlarged{position: fixed; left:0; top:0; width: 100%; width: 100vw;   background: #000;  height: 0; opacity: 0;transition: all 0.5s;z-index:0; overflow: hidden;
+.enlarged , .obojeno{position: fixed; left:0; top:0; width: 100%; width: 100vw;   background: #000;  height: 0; opacity: 0;transition: all 0.5s;z-index:0; overflow: hidden;
 display: table-cell; vertical-align: middle; text-align: center;
  }
-.enlarged.show{height: 100vh; opacity: 1; width: 100vw;  z-index: 150; }		
+ /*.obojeno {background: #fff;}*/
+.enlarged.show , .obojeno.show{height: 100vh; opacity: 1; width: 100vw;  z-index: 150; }		
 .second-nav{display: flex; justify-content: center; }
 .navbar-nav  ul.navbar-nav.second-nav.closed  {  height: 0;  opacity: 0; top: -200px; position: absolute;  }
 .navbar-nav  ul.navbar-nav.second-nav.opened  { 	width: 100vw !important; position: absolute; left:0 ;  height: 55px; 
@@ -210,28 +212,32 @@ h1.indeksh1 {padding-left: 20px;}
   animation-fill-mode: forwards;  
 }
 
-.velikaslika {margin-left: auto; margin-right: auto;}
-.velikaslika img{max-width: 98vw; max-height: 98vh; width: auto; height: auto; display: inline-block; margin-left: 1vw; margin-top: 1vh;}
+.velikaslika , .bigcolor{margin-left: auto; margin-right: auto;}
+.velikaslika img , .bigcolor img{max-width: 98vw; max-height: 98vh; width: auto; height: auto; display: inline-block; margin-left: 1vw; margin-top: 1vh;}
+/*.bigcolor img{max-width: 70vw; max-height: 70vh;}*/
 .close {color: rgba(255,255,255,0.4); position: absolute; right: 20px; top: -10px; font-size: 40px; transition:all 0.3s; }
 .close:hover {color: rgba(255,255,255,0.7);  }
 body.noscroll {overflow: hidden;}
+.incolor {display: inline-block; width: 70px; height: 70px;  position:  absolute; top: 20px; cursor: pointer;opacity: 1}
+.inp-color {width: 70px; height: 70px; border-radius: 6px;border:5px solid #ff7777;}
 .left, .rihgt {color: #fff; display: inline-block; width: 30px; height: 80px;  position:  absolute; top: 50vh; margin-top: -40px; opacity: 0.4; cursor: pointer; }
-.left {left: 5px;}
+.left , .incolor{left: 5px;}
 .rihgt {right: 5px;}
 .left:hover, .rihgt:hover {opacity: 0.7}
 
-.velikaslika {position: absolute; left: 50%;}
-.velikaslika img {margin-left: -100%;}
-.velikaslika .videcesme { opacity: 0}
-.velikaslika .vidisme { opacity: 1}
 
-.velikaslika .videcesme.prelaz {
+.velikaslika , .bigcolor{position: absolute; left: 50%;}
+.velikaslika img  , .bigcolor img{margin-left: -100%;}
+.velikaslika .videcesme , .bigcolor .obojicese{ opacity: 0}
+.velikaslika .vidisme , .bigcolor .bojanka{ opacity: 1}
+
+.velikaslika .videcesme.prelaz , .bigcolor .obojicese.prelaz{
   -webkit-animation: imgshow 1s; 
   animation: imgshow 1s 1;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; 
 }
-.velikaslika .vidisme.prelaz{
+.velikaslika .vidisme.prelaz , .bigcolor .bojanka.prelaz{
   -webkit-animation: imghide 1s; 
   animation: imghide 1s 1;
   -webkit-animation-fill-mode: forwards;
