@@ -65,6 +65,7 @@ margin-bottom: 6px;
 .o-meni {margin-left: auto;margin-right: auto;}
 .o-meni p {margin-bottom: 10px;letter-spacing: 0.04em;text-align: justify;}
 
+.btn {padding: .6rem .75rem;width: 100px;text-align: center;display: inline-block;-webkit-transition: all 0.2 ease-in 0s;transition: all 0.2s ease-in 0s;}
 
 h1.indeksh1 {margin-top: 110px}
 
@@ -163,6 +164,9 @@ h1.indeksh1 {padding-left: 20px;}
 		.irina-sa-jabukom {width: 33.33%;}
 		.o-meni {width: 70%;}
 		.bojanka , .obojicese{max-width: 50vw; max-height: 50vh;}
+}
+@media only screen and (min-width: 992px) and (max-width: 1012px) {
+	.podacioslici {margin-right: 15px;}
 }
 @media only screen and (min-width: 1200px) {
 	.grid-galerija img.portrait {max-height: 92px; width: auto}

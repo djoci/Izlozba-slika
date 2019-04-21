@@ -8,7 +8,8 @@ footer {border-top: 1px solid #e4c37c; color: #e4c37c}
 .navbar-toggler-right:hover , .navbar-toggler-right:focus {
     background-color: #ddd;
   }
-  
+  .btn {border: 1px solid #e4c37c;color: #e4c37c;}
+	.btn:hover , .btn:active , .btn:focus {background-color: #e4c37c; color: #fff;} 
   .line {background-color: #555;}
   .topnav {background-color: #fff;}
   footer a {color: #ff7777}
