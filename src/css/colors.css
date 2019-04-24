@@ -13,3 +13,19 @@ footer {border-top: 1px solid #e4c37c; color: #e4c37c}
   .line {background-color: #555;}
   .topnav {background-color: #fff;}
   footer a {color: #ff7777}
+  .text-muted {color: #6c757d;}
+
+  .form-control {
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #e4c37c;
+  }
+  .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: rgb(228,195,124);
+    box-shadow: 0 0 0 .2rem rgba(228,195,124,.25);
+  }
+  .dug-sub button {background-color: #e4c37c;color: #fff;}
+  .dug-sub button:hover {background-color: #fff;color: #e4c37c;}
+  .invalid-feedback {color: #ff0000;}
