@@ -191,14 +191,8 @@
                 </form>
 
             </div>
-            <div class="check-img">
-                <div><img src="images/CvetSakuri.jpg" alt="Sakura blossom"></div>
-                <div class="text-left">
-                    <p class="it">Sakura blossom, 2016</p>
-                    <p class="tehnika">acrylic on canvas</p>
-                    <p>140cm &times; 100cm</p>
-                    <p>€2800</p>
-                </div>
+            <div class="check-img" id="check-img">
+
             </div>
         </div>
     </div>
@@ -210,7 +204,51 @@
                 target="blank">djoci</a>.</footer>
     </div>
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/djocicarousel.js"></script>
+
+    <script>
+            const _api = axios.create({
+                  baseURL:`http://localhost:3000`
+              });
+
+             async function ucitajmojusliku(slikaID){
+                let response = await _api.get(`/izlozba`);
+                let slike = await response.data;
+                let i=0;
+                let item_curent;
+                for (const slika of slike) {
+
+                   if (slika.ID ==slikaID) {
+                    _render(slika);
+                   }
+                  }
+            }
+            async function _render(slika,i,item_curent){
+                $(`.check-img`).append(`
+                <div><img src="images/${slika.lokacija}" alt="${slika.name}"></div>
+                <div class="text-left">
+                    <p class="it">${slika.name}, ${slika.godina}</p>
+                    <p class="tehnika">acrylic on canvas</p>
+                    <p>${slika.sirina}cm &times; ${slika.visina}cm</p>
+                    <p>€${slika.price}</p>
+                </div>
+                `)                
+            }
+
+
+    function getUrlVars() {
+        let parts = window.location.href.split('=');
+        ucitajmojusliku(parts[1])
+    }
+    getUrlVars()
+    
+            
+
+
+
+    
+    </script>
 </body>
 
 </html>
