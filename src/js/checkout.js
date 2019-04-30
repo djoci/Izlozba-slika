@@ -28,7 +28,7 @@ async function _render(slika,i,item_curent){
 
 
 function getUrlVars() {
-let parts = window.location.href.split('=');
+let parts = window.location.href.split('#');
 ucitajmojusliku(parts[1])
 }
 getUrlVars()
