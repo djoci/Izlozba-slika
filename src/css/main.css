@@ -151,7 +151,7 @@ h1.indeksh1 {margin-top: 110px}
 .carousel .caroitem {position: absolute; }
 .carousel .caroitem {z-index: 99; opacity: 0;}
 .carousel .caroitem.item-current {z-index: 100; opacity: 100;}
-.grid-galerija img , .stop , .close , .colorme{cursor: pointer;}	
+.grid-galerija img , .stop , .close , .colorme , .btn{cursor: pointer;}	
 	
 .extra-buttons {position: absolute; left:20px; z-index: 101;  }
 .zoom {display: inline-block; width: 48px; height: 48px; background: url(../imgs/zoom.svg);opacity: 0; }
