@@ -35,7 +35,7 @@
                   <p class="tehnika">acrylic on canvas</p>
                   <p>${slika.sirina}cm &times; ${slika.visina}cm</p>
                   <p>€${slika.price}</p>
-				  <a href="checkout.html?ID=${slika.ID}" class="btn" id="${slika.ID}">Buy art</a>
+				  <a href="checkout.html#${slika.ID}" class="btn" id="${slika.ID}">Buy art</a>
                  </div>  
                  </div>`);
                  $(`.grid-galerija`).append(
