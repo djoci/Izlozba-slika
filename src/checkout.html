@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Artistic paintings by Artist Irina Ohrimenko">
-    <meta name="author" content="Irina Ohrimenko">
+    <meta name="author" content="zorica" >
     <title>Checkout - Irina Ohrimenko</title>
     <link href="https://fonts.googleapis.com/css?family=Exo:300,300i,400,400i&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/colors.css">
@@ -145,12 +145,45 @@
                         <label class="custom-control-label" for="credit">Credit card</label>
                     </div>
                     <div>
-                        <input id="cod" name="paymentMethod" type="radio" class="custom-control-input" required>
-                        <label class="custom-control-label" for="cod">Cash on delivery</label>
+                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="debit">Debit card</label>
                     </div>
                     <div>
                         <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
                         <label class="custom-control-label" for="paypal">Paypal</label>
+                    </div>
+                    <div class="row2">
+                        <div class="lev-pad">
+                            <label for="cc-name">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <small class="text-muted">Full name as displayed on card</small>
+                            <div class="invalid-feedback" id="forCardName">
+                                Name on card is required
+                            </div>
+                        </div>
+                        <div class="des-pad">
+                            <label for="cc-number">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                            <div class="invalid-feedback" id="forCCNumber">
+                                Valid credit card number is required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="lev-pad">
+                            <label for="cc-expiration">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="month/full year" required>
+                            <div class="invalid-feedback" id="forCCExpiration">
+                                Valid expiration date is required
+                            </div>
+                        </div>
+                        <div class="des-pad">
+                            <label for="cc-expiration">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="3 digit number" required>
+                            <div class="invalid-feedback" id="forCVV">
+                                Security code required
+                            </div>
+                        </div>
                     </div>
                     <div class="dug-sub">
                         <button class="btn" type="submit" id="dugme">Continue to checkout</button>
@@ -175,6 +208,7 @@
     <script src="js/djocicarousel.js"></script>
     <script src="js/checkout.js"></script>
     <script src="js/validation.js"></script>
+    
 </body>
 
 </html>
