@@ -103,8 +103,6 @@ $( ".left" ).click(function() {
    		$('.videcesme.prelaz').addClass('vidisme').removeClass('prelaz').removeClass('videcesme');   
 	   }, 1000);   	
 });
-
-
 $( ".rihgt" ).click(function() {
 	var TotalSlides = $('.previmg').length;
    let obojise = $('.bojanka').attr('src');   
@@ -133,10 +131,6 @@ $( ".left" ).click(function() {
    		$('.obojicese.prelaz').addClass('bojanka').removeClass('prelaz').removeClass('obojicese');   
 	   }, 1000);   	
 });
-
-
-
-
 $( window ).resize(function() {
 	if ($( window ).width()>767) {
 	  $( ".stop" ).trigger( "click" );
@@ -172,9 +166,3 @@ $( window ).resize(function() {
  $( ".second-nav" ).mouseleave(function() {
   galery();
  });
-
-
-
-function validacija() {
-  $('.invalid-feedback').addClass('vidi-poruku');
-}
