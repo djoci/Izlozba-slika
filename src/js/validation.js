@@ -1,64 +1,79 @@
-/*var mojedugme = document.getElementById('dugme');
+var mojedugme = document.getElementById('dugme');
  mojedugme.addEventListener("click", function(event){
 	    event.preventDefault()
 	});
 	mojedugme.onclick = function(){
+     
  	kupi();
-    };*/
+   };
+    function kupi() {
+      let PROVERA = true; 
+      PROVERA = proveriIme() && proveriPrezime() && proveriAdresu() && proveriZemlju() && proveriGrad() && proveriZipKod() && proveriCCname() && proveriBrojKartice() && proveriCVV() && checkdate();
+      if(PROVERA){
+       ispisIzBaze(); 
+
+      }    
+    
+    }
     document.getElementById("firstName").onblur = function(){
-      proveriIme()
+      proveriIme();
      };
   function proveriIme() {
       var ime = document.getElementById('firstName').value.trim();
-    
-     if (/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}$/.test(ime) == false)
-     {
-      $( "#forIme" ).addClass( "vidi-poruku" );
-     } else {
-      $( "#forIme" ).removeClass( "vidi-poruku" );
-       } 
+      if (/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}$/.test(ime) == true) {
+         $( "#forIme" ).removeClass( "vidi-poruku" );
+         return true;
+      } else
+     { 
+      $( "#forIme" ).addClass( "vidi-poruku" );  
+         return false;
+   }
    }
    document.getElementById("lastName").onblur = function(){
-      proveriPrezime()
+      proveriPrezime();
      };
    function proveriPrezime() {
       var prezime = document.getElementById('lastName').value.trim();
-      if (/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}(\s?[A-zčćšđž])*$/.test(prezime) == false)
-      {
-       $( "#forPrezime" ).addClass( "vidi-poruku" );
+      if (/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}(\s?[A-zčćšđž])*$/.test(prezime) == true)
+      {  $( "#forPrezime" ).removeClass( "vidi-poruku" );
+            return true;
       } else {
-       $( "#forPrezime" ).removeClass( "vidi-poruku" );
+         $( "#forPrezime" ).addClass( "vidi-poruku" );
+         return false;
         }
    }
    document.getElementById("address").onblur = function(){
-      proveriAdresu()
+      proveriAdresu();
      };
    function proveriAdresu(){
        var adresa = document.getElementById('address').value.trim();
-       if (/[A-ZČĆŠĐŽa-zčćšđž',-\\/.\s]/.test(adresa) == false)
-       {
-          $( "#forAdress" ).addClass( "vidi-poruku" );  
+       if (/[A-ZČĆŠĐŽa-zčćšđž',-\\/.\s]/.test(adresa) == true)
+       {  $( "#forAdress" ).removeClass( "vidi-poruku" );
+          return true;  
        } else {
-          $( "#forAdress" ).removeClass( "vidi-poruku" );
+         $( "#forAdress" ).addClass( "vidi-poruku" );
+         return false;
        }
    }
 
    document.getElementById("country").onblur = function(){
-       proveriZemlju()
+       proveriZemlju();
       };
 
    function proveriZemlju() {
      var e = document.getElementById("country");
      var zemlja = e.options[e.selectedIndex].value;
 
-     if (zemlja == '') {
-      $( "#forCountry" ).addClass( "vidi-poruku" ); 
+     if (zemlja == "") {
+      $( "#forCountry" ).addClass( "vidi-poruku" );
+      return false;      
      } else {
-      $( "#forCountry" ).removeClass( "vidi-poruku" );  
+      $( "#forCountry" ).removeClass( "vidi-poruku" );
+      return true;  
      } 
    }
    document.getElementById("city").onblur = function(){
-      proveriGrad()
+      proveriGrad();
      };
 
   function proveriGrad() {
@@ -66,51 +81,59 @@
     var grad = city.options[city.selectedIndex].value;
 
     if (grad == '') {
-     $( "#forCity" ).addClass( "vidi-poruku" ); 
+     $( "#forCity" ).addClass( "vidi-poruku" );
+     return false; 
     } else {
-     $( "#forCity" ).removeClass( "vidi-poruku" );  
+     $( "#forCity" ).removeClass( "vidi-poruku" );
+     return true;  
     } 
   }
   document.getElementById("zip").onblur = function(){
-      proveriZipKod()
+      proveriZipKod();
      };
 
   function proveriZipKod() {
       var zip = document.getElementById('zip').value.trim();
       if (/[\w',-\\/.\s]/.test(zip) == false)
       {
-         $( "#forZip" ).addClass( "vidi-poruku" );  
+         $( "#forZip" ).addClass( "vidi-poruku" );
+         return false;  
       } else {
          $( "#forZip" ).removeClass( "vidi-poruku" );
+         return true;
       }
   }
   document.getElementById("cc-name").onblur = function(){
-      proveriCCname()
+      proveriCCname();
      };
    function proveriCCname() {
       var cc = document.getElementById('cc-name').value.trim();
       if (/[a-z]/gi.test(cc) == false)
       {
        $( "#forCardName" ).addClass( "vidi-poruku" );
+       return false;
       } else {
        $( "#forCardName" ).removeClass( "vidi-poruku" );
+        return true;
         }
    }
    document.getElementById("cc-number").onblur = function(){
-      proveriBrojKartice()
+      proveriBrojKartice();
      };
 
   function proveriBrojKartice() {
       var creditNumber = document.getElementById('cc-number').value.trim();
       if (/^\d+$/.test(creditNumber) == false)
       {
-         $( "#forCCNumber" ).addClass( "vidi-poruku" );  
+         $( "#forCCNumber" ).addClass( "vidi-poruku" ); 
+         return false; 
       } else {
          $( "#forCCNumber" ).removeClass( "vidi-poruku" );
+         return true;
       }
   }
   document.getElementById("cc-expiration").onblur = function(){
-   checkdate()
+   checkdate();
   };
   function checkdate() {
    var exdate = document.getElementById('cc-expiration').value.trim();
@@ -142,21 +165,25 @@
         
        if (error==1) {
        // ima greska   -> pokazujemo poruku 
-        $( "#forCCExpiration" ).addClass( "vidi-poruku" );      	
+        $( "#forCCExpiration" ).addClass( "vidi-poruku" );
+        return false;      	
        } else {
-          $( "#forCCExpiration" ).removeClass( "vidi-poruku" );    
+          $( "#forCCExpiration" ).removeClass( "vidi-poruku" ); 
+          return true;   
        }        
   } 
   document.getElementById("cc-cvv").onblur = function(){
-   proveriCVV()
+   proveriCVV();
   };
 
 function proveriCVV() {
    var cvv = document.getElementById('cc-cvv').value.trim();
    if (/^\d{3}$/.test(cvv) == false)
    {
-      $( "#forCVV" ).addClass( "vidi-poruku" );  
+      $( "#forCVV" ).addClass( "vidi-poruku" );
+      return false;  
    } else {
       $( "#forCVV" ).removeClass( "vidi-poruku" );
+      return true;
    }
 }        
