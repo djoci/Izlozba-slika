@@ -1,7 +1,14 @@
-           const _api = axios.create({
-                  baseURL:`http://localhost:3000`
-              });
 
+              remove = (ID) => {
+                axios.delete('http://localhost:3000/izlozba' + ID)
+                  .then(function(response) {
+                    this.setState({
+                      filtered: response
+                    })
+                  }).catch(function(error) {
+                    console.log(error)
+                  })
+              }
             /* async function sadrzajIndex(){
                 let response = await _api.get(`/izlozba`);
                 let slike = await response.data;
@@ -9,7 +16,6 @@
                     _render_index(slika);
                   }
             }
-
 
             async function _render_index(slika){
                 $(`.index-container`).append(`<div class="slika slika-index">
