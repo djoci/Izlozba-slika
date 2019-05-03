@@ -3,17 +3,14 @@ var mojedugme = document.getElementById('dugme');
 	    event.preventDefault()
 	});
 	mojedugme.onclick = function(){
-     
  	kupi();
    };
     function kupi() {
       let PROVERA = true; 
       PROVERA = proveriIme() && proveriPrezime() && proveriAdresu() && proveriZemlju() && proveriGrad() && proveriZipKod() && proveriCCname() && proveriBrojKartice() && proveriCVV() && checkdate();
       if(PROVERA){
-       ispisIzBaze(); 
-
+         window.location.href = "./thankyou.html";
       }    
-    
     }
     document.getElementById("firstName").onblur = function(){
       proveriIme();
