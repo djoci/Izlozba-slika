@@ -1,4 +1,4 @@
-function sum(a, b) {
-    return a + b;
-  }
-  module.exports = sum;
+function compileAndroidCode() {
+  throw new ConfigError('you are using the wrong JDK');
+}
+  module.exports = compileAndroidCode;
