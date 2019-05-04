@@ -4,7 +4,7 @@
   "description": "Izlozba slika Inicijalizacija projekta",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "server": "json-server --watch db.json"
   },
   "repository": {
