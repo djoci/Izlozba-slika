@@ -5,7 +5,7 @@ describe('proveriIme', () => {
   });
 
   test('/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}$/.test(ime)', () => {
-    expect('Zorica').toMatch(/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}$/);
+    expect('Anamarija').toMatch(/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}$/);
   });
 
   test('/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}$/.test(ime)', () => {
@@ -13,18 +13,3 @@ describe('proveriIme', () => {
   });
 
 });
-
-describe(`if ime matches with /^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{1,12}$/`, () => {
-  
-  test('$( "#forIme" ).removeClass( "vidi-poruku" )', () => {
-    expect(true).toBeTruthy();
-  });
-
-  test('$( "#forIme" ).addClass( "vidi-poruku" )', () => {
-    expect(false).toBeTruthy();
-  });
-
-});
-
-
-
