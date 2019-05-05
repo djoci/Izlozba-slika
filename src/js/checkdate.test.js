@@ -1,4 +1,4 @@
-const checkdate = require('./math')
+const checkdate = require('./checkdate')
 describe('checkdate', () => {
   it('Datum mesec i godina mogu da budu tekuci ili u buducnosti', () => {
     expect(true).toBeTruthy();
@@ -16,6 +16,4 @@ test('Pogresan unos', () => {
   expect(checkdate('18/2011')).toBe(false);
 });
 
-
 });
-

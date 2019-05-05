@@ -173,9 +173,7 @@ var mojedugme = document.getElementById('dugme');
           return true;   
        }        
   }
-  
-  
-   
+     
   document.getElementById("cc-cvv").onblur = function(){
    proveriCVV();
   };

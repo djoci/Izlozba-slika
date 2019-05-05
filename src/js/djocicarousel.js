@@ -7,7 +7,7 @@ function toggleFunction() {
 	}
  }
 		var autoslide = true;
-	 	var slideinterval=6000;  // sekunde izmedju slajdova
+	 	var slideinterval=4000;  // sekunde izmedju slajdova
 		var intervals=[];
 		var timeouts=[];
 		var ki=-1;
