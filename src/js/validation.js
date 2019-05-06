@@ -7,7 +7,7 @@ var mojedugme = document.getElementById('dugme');
    };
     function kupi() {
       let PROVERA = true; 
-      PROVERA = proveriIme() && proveriPrezime() && proveriAdresu() && proveriZemlju() && proveriGrad() && proveriZipKod() && proveriCCname() && proveriBrojKartice() && proveriCVV() && checkdate();
+      PROVERA = proveriIme() && proveriPrezime() && proveriAdresu() && proveriZemlju() && proveriGrad() && proveriZipKod() && proveriCCname() && proveriBrojKartice() && proveriCVV() && checkdate(document.getElementById('cc-expiration').value.trim());
       if(PROVERA){
          window.location.href = "./thankyou.html";
       }    
@@ -130,10 +130,14 @@ var mojedugme = document.getElementById('dugme');
       }
   }
   document.getElementById("cc-expiration").onblur = function(){
-   checkdate();
+   let validanDatum = checkdate(document.getElementById('cc-expiration').value.trim());
+   if (validanDatum){
+      $( "#forCCExpiration" ).removeClass( "vidi-poruku" );       
+   }else{
+    	$( "#forCCExpiration" ).addClass( "vidi-poruku" );  
+   }
   };
-  function checkdate() {
-   var exdate = document.getElementById('cc-expiration').value.trim();
+  function checkdate(exdate) {
        exdate = exdate.split('/');
        error=0;
        // Proveravamo duzinu
@@ -143,7 +147,7 @@ var mojedugme = document.getElementById('dugme');
           month = parseInt(month);	        
           year = parseInt(year);
           // proveravamo mesec   
-          if (month < 0 || month >11 || isNaN(month)) {
+          if (month < 1 || month >12 || isNaN(month)) {
               error = 1;	        	
           }
           // proveravamo godinu  
@@ -162,13 +166,14 @@ var mojedugme = document.getElementById('dugme');
         
        if (error==1) {
        // ima greska   -> pokazujemo poruku 
-        $( "#forCCExpiration" ).addClass( "vidi-poruku" );
+    
         return false;      	
        } else {
-          $( "#forCCExpiration" ).removeClass( "vidi-poruku" ); 
+ 
           return true;   
        }        
-  } 
+  }
+     
   document.getElementById("cc-cvv").onblur = function(){
    proveriCVV();
   };
