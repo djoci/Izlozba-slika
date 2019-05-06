@@ -1,8 +1,46 @@
-# Izlozba slika
+# Izložba slika
 
 ## Osnovne informacije
 
-Sajt je prikaz umetničkih dela slikarke Irina Ohrimenko. Sadrži osnovne informacije o slikarki, njenih izložbi i internet prodavnicu. Dizajn je jednostavan sa ciljem da pokaže lepotu umetničkih dela.
+Sajt je prikaz umetničkih dela slikarke Irine Ohrimenko uz njenu kratku biografiju.  Dela su organizovana u galerije i izložbu, koje imaju i mogućnost kupovine odabrane slike (uz checkout formu i zahvalnicu). Sajt je responzivan sa dizajnom koji je podređen fotografijama umetničkih dela.
+
+## Organizacija web stranica
+```
+├── index.html
+|
+├── about.html
+|
+├── acts.html
+├── thematic.html
+├── landscapes.html    
+|
+├── exhibition.html
+|
+└── ├── checkout.html
+    └── thankyou.html
+```
+### "Index" stranica
+Prikazuje fotografije i osnovne podatke svih umetničkih slika iz JSON baze podataka.
+
+<em>Izgled dele stranice na desktop racunaru</em>
+![Index Screen1](screenshots/Index.png)
+<em>Izgled dela stranice na iPhone uređaju</em>
+![Index Screen2](screenshots/Index-IPhone.png)
+
+### "About the artist" stranica
+Biografija umetnice i njena fotografije ispred slike "Narandžasti put"
+
+<em>Screenshot za iPad</em>
+
+![Index Screen2](screenshots/About.png)
+
+### "Exhibition",  "Acts", "Thematic" i "Landscapes" stranice
+
+Stranice sadrže deo slika iz baze koje su grupisane u celine, osim toga konstrukcija ovih stranice je identična. Stranica ima slajder, kojim se trenutna slika može menjati manuelno ali se može uključiti i automatski mod. Svaka slika se može uveličati na ceo ekran, gde je takođe moguće preći na drugu sliku pomoću slajdera. Postoji i mogućnost promene boje pozadine slike - omogućava posetiocu da vidi kako se slika uklapa na pozadine različitih boja.
+
+![Index Screen2](screenshots/GalerijaIkar1.png)
+
+![Index Screen2](screenshots/GalerijaIkar2.png)
 
 ## Tehnologije korišćene pri razvoju
 
