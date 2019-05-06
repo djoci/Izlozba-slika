@@ -258,7 +258,7 @@ body.noscroll {overflow: hidden;}
 
 
 .velikaslika , .bigcolor{position: absolute; left: 50%;}
-.velikaslika img  , .bigcolor img{margin-left: -100%;}
+.velikaslika img  , .bigcolor img{margin-left: -100%; box-shadow: 10px 10px 30px 10px rgba(0,0,0,.1)}
 .velikaslika .videcesme , .bigcolor .obojicese{ opacity: 0}
 .velikaslika .vidisme , .bigcolor .bojanka{ opacity: 1}
 
