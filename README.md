@@ -62,3 +62,4 @@ Za pokretanje JEST testa pokrenuti komandu <b>npm run test</b>.
 └── package.json
 ```
 
+![Izlozba Screen1](screenshots/Izlozba.png)
